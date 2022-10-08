@@ -1,0 +1,13 @@
+@import '../../styles/global_styles.scss';
+
+.cards{
+    @include display-flex;
+}
+
+.button{
+    margin: auto;
+    width: 60%;
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
+}

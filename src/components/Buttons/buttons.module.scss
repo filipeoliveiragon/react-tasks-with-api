@@ -1,0 +1,28 @@
+@import '../../styles/global_styles.scss';
+
+.btn{
+    min-width: 100%;
+    height: 65px;
+    border-radius: 10px;
+    background-color: $orangeMain;
+    font-size: 35px;
+    padding: 0 45px;
+    border: none;
+    color: #fff;
+    @include display-flex;
+    
+    text-decoration: none;
+
+    &:hover{
+        background-color: darken($orangeMain, 2%);
+    }
+
+    @media screen and (max-width: $sm) {
+        font-size: 1rem;
+        height: 40px;
+    }
+}
+
+.tam30{
+    width: 30%;
+}

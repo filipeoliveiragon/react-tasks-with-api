@@ -1,0 +1,111 @@
+@import '../../../styles/global_styles.scss';
+
+.cardGroup{
+    width: 100%;
+    @include display-flex-evelyn;
+    margin: 30px 0;
+
+    .checkbox{
+        width: 10%;
+        @include display-flex;
+        input[type ="checkbox"]{
+            width: 37.5px;
+            height: 37.5px;
+        }
+    }
+
+    .card{
+        width: 100%;
+        height: 100px;
+        border-radius: 15px;
+        background-color: $lightBlue;
+        @include display-flex;
+
+        &__active{
+            background-color: $blueColor;
+        }
+
+        .id{
+            @include display-flex;
+            width: 10%;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .infos{
+            width: 75%;
+            p{
+                font: 'Inter';
+                &:nth-child(1){
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: 35px;
+                }
+
+                &:nth-child(2){
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .icons{
+            width: 15%;
+            @include display-flex;
+            justify-content: right;
+            padding-right: 10px;
+            gap: 10px;
+        }
+    }
+
+    @media screen and (max-width: $sm) {
+        margin: 0;
+        margin-bottom: 15px;
+
+        .checkbox{
+            width: 5%;
+            input[type ="checkbox"]{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        
+        .card{
+            width: 90%;
+            height: 50px;
+            border-radius: 10px;
+
+            justify-content: flex-start;
+
+            .id{
+                width: 15%;
+                font-size: 10px;
+            }
+
+            .infos{
+                width: 65%;
+                overflow: hidden;
+                margin-left: 5px;
+                p{
+                    &:nth-child(1){
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    &:nth-child(2){
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .icons{
+                width: 20%;
+                gap: 5px;
+                padding-right: 5px;
+                img{
+                    width: 20px;
+                    justify-content: right;
+                }
+            }
+        }
+    }
+}

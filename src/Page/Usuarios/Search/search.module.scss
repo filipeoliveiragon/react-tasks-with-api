@@ -1,0 +1,78 @@
+@import '../../../styles/global_styles.scss';
+
+.section {
+    min-width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    .form {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 77% 20%;
+        align-items: flex-end;
+        gap: 3%;
+        flex-flow: row nowrap;
+        background-color: #0900;
+        margin: 30px 0;
+
+        @media screen and (max-width: $sm) {
+            grid-template-columns: 3fr 1fr;
+            gap: 5%;
+        }
+    }
+
+    .inputGroup {
+        @include display-left;
+        width: 100%;
+        flex-direction: column;
+        align-items: left;
+
+        .input {
+            height: 60px;
+            width: 100%;
+            border: 2px solid $orangeMain;
+            border-radius: 10px;
+            padding-left: 10px;
+            font-size: 20px;
+            color: $orangeMain;
+
+            &::placeholder {
+                color: $orangeMain;
+            }
+
+            &:focus {
+                outline: none;
+                border: 2px solid $blueColor;
+            }
+
+            @media screen and (max-width: $sm) {
+                height: 40px;
+                font-size: 12px;
+            }
+        }
+
+    }
+
+    .list {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+        h1{
+            font-size: 25px;
+        }
+
+        @media screen and (max-width: $sm) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 0px;
+            gap: 15px;
+            h1{
+                font-size: 14px;
+            }
+        }
+    }
+}

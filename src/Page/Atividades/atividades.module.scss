@@ -1,0 +1,9 @@
+@import '../../styles/global_styles.scss';
+
+.button{
+    margin: auto;
+    width: 60%;
+    @media screen and (max-width: $sm) {
+        width: 100%;
+    }
+}

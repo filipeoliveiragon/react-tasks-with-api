@@ -1,0 +1,110 @@
+@import '../../../styles/global_styles.scss';
+
+.div {
+    width: 100%;
+
+    .card {
+        width: 100%;
+        height: 185px;
+        background-color: $lightBlue;
+        border-radius: 15px;
+        @include display-flex-evelyn;
+        padding: 10px 5px;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            column-gap: 30px;
+            width: 100%;
+            align-items: center;
+        }
+
+        &__infos {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            width: 93%;
+            height: 100%;
+
+            padding-left: 30px;
+            font-family: 'Inter';
+
+            .edit:hover {
+                background-color: $orangeMain;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            h1 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            h2 {
+                font-size: 22px;
+                font-weight: 400;
+            }
+        }
+
+        &__icons {
+            width: 7%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            button {
+                background: none;
+                border: none;
+                @include display-flex-left;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $sm) {
+        .card {
+            height: 120px;
+
+            .row {
+                column-gap: 10px;
+            }
+
+            &__infos {
+                padding-left: 10px;
+
+                img {
+                    height: 15px;
+                    width: 15px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+
+            &__icons {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
